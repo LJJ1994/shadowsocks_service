@@ -1,17 +1,17 @@
 # Ununtu18-SS
-shawdowsocks
+# shawdowsocks
 
-1.更新apt安装源
+## 1.更新apt安装源
 
 sudo apt-get update
 sudo apt install shadowsockt
 
-2.用vim配置json文件
+## 2.用vim配置json文件
 
 sudo apt install vim 
 vim /etc/shadowsocks.json
 
-3.json文件内容
+## 3.json文件内容
 
 
 {
@@ -23,11 +23,11 @@ vim /etc/shadowsocks.json
 "method":"加密方式"
 }
 
-4.terminal加载配置文件
+## 4.terminal加载配置文件
 
 sslocal -c /etc/shadowsocks.json
 
-5.在本地设置sock代理
+## 5.在本地设置sock代理
 
 HTTP----端口：8080
 Socks5主机----端口: 1080
