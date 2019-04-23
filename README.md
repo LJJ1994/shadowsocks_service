@@ -4,7 +4,7 @@
 ## 1.更新apt安装源
 
 `sudo apt-get update`   
-`sudo apt install shadowsockt`  
+`sudo apt install shadowsocks`  
 
 ## 2.用vim配置json文件
 
