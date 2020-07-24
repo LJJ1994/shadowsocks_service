@@ -1,5 +1,7 @@
 ## 1. 在Centos7上构建属于你自己的Shadowsocks服务
 
+### 声明：该repo提供的翻墙技术仅用于学习和工作交流，查阅资料，请勿用作非法用途，请勿违反国家法律法规，对此造成的后果本人概不负责。
+
 #### 这是一张个人简单画的代理流程图.
 ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/proxy02.png)
 
