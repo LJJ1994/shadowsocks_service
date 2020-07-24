@@ -82,14 +82,19 @@
   
   
 ## 4. 在此以window10 为例，点击如下连接，然后下载箭头指向的assets, 这里版型选择4.1.10.0，注意：由于墙对Github的特殊感情（其实对于技术网站，基本都会被封禁掉，这也就是为啥你做开发，下载一个第三方包，会慢的要死的原因，因为这些东东不受审查，并且程序员容易开智，不容易被洗脑，所以这个群体很容易受到有关部门和墙的关照），所以打开GitHub可能会很慢，并且下载资源也会很慢
+
   <a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank">shadowsocks window</a>
+  
+  ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test20.png)
   
   #### 1. 然后在你的window10新建一个目录，将其解压到目录，目录路径不有中文（为什么不要有中文？因为这些软件是用英文开发的，一般使用的UTF8字符集，而中文一般是GBK开头的字符集，两个不同的字符集必然导致字符编码时造成混乱）。
   
   #### 2. 如果你使用了混淆，那么还需要一个混淆插件，点击如下连接，下载箭头的assets, 然后解压，将其放到你刚刚解压的 shadowsocks window 根目录。
   <a href="https://github.com/shadowsocks/simple-obfs/releases" target="_blank">obfs local</a>
   
-  #### 3. 开始设置shadowsocks信息，安装刚刚在xshell安装成功后的信息如下填写就行。如果没来得急保存，在服务器下，输入``` cat /etc/shadowsocks-libev/config.json ```即可，会出现如下的配置信息。
+  ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test21.png)
+  
+  #### 3. 开始设置shadowsocks信息，安装刚刚在xshell安装成功后的信息如下填写就行。如果没来得急保存，在服务器下，输入 ` cat /etc/shadowsocks-libev/config.json ` 即可，会出现如下的配置信息。
   ```
   {
     "server":"0.0.0.0",
@@ -105,10 +110,23 @@
     "plugin_opts":"obfs=tls"
 }
   ```
-  **server** 服务器本地地址，在客户端输入你的真实IP地址
-  **server_port** 端口
-  **password** 密码
-  **method** 协议
-  **plugin** 混淆服务器插件
-  **obfs=tls** 混淆方式：tls
+  **server** 服务器本地地址，在客户端输入你的真实IP地址  
+  **server_port** 端口  
+  **password** 密码  
+  **method** 协议  
+  **plugin** 混淆服务器插件  
+  **obfs=tls** 混淆方式：tls  
   
+  #### 这是客户端配置信息
+  ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test19.png)
+  
+  #### 这里的obfs是混淆插件，需要设置一些参数
+   **插件程序** 固定写`obfs-local`  
+   **插件选项** `obfs=tls;obfs-host=www.bing.com`, **tls**是你选择的混淆协议，**obfs-host**是访问某个网站（外网，可访问）来达到混淆墙的监测。
+   **需要命令行参数** 勾上
+   **插件参数** `obfs=tls` tls同理
+   **备注** 随意填写
+   **超时** 默认即可
+  #### 然后点击应用，确认。
+  
+  #### 右键你的shadowsocks客户端，鼠标点击系统代理，选择PAC模式。
