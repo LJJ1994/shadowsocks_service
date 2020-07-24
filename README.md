@@ -14,4 +14,5 @@
  ### 以上可以自行搜索并购买服务器，选择vps关键词，不要选host之类的，在此不再赘述。
  
  ## 2. 下面以Virmatch为例，带领大家手把手建立shadowsocks服务。在此先通过Xshell连接你的远程服务器。
-  # 以下是virmatch控制面板提供的信息，
+  ### 以下是virmatch控制面板提供的信息，其中ip是地址，用户名为root, 密码为 Root/Admin Password
+  https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test04.png
