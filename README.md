@@ -1,5 +1,8 @@
 ## 1. 在Centos7上构建属于你自己的Shadowsocks服务
 
+#### 这是一张个人简单画的代理流程图.
+![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/proxy01.png)
+
 首先你需要购买一台vps服务器，网上有很多vps厂商，比如vultr，virmatch, 搬瓦工等
 
 1. <a href="https://my.vultr.com/deploy/" target="_blank">vultr</a>
