@@ -15,4 +15,7 @@
  
  ## 2. 下面以Virmatch为例，带领大家手把手建立shadowsocks服务。在此先通过Xshell连接你的远程服务器。
   ### 以下是virmatch控制面板提供的信息，其中ip是地址，用户名为root, 密码为 Root/Admin Password
-  https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test04.png
+  ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test04.png)
+  
+  ### 以下是xshell登录设置，由于一些原因（GFW, 墙），通过ssh登录远程服务器速度会很慢，请耐心等待，或者重新开启新的窗口登录。
+  ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test03.png)
