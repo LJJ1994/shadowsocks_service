@@ -55,4 +55,4 @@
   
   
   ### 安装成功，会出现如下界面，这是你的shadowsocks配置信息。
-   ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/success.jpeg)
+   ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/success.jpg)
