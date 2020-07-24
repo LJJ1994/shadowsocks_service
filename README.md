@@ -32,27 +32,34 @@
   
   以下是安装的脚本提示，安装脚本提示输入相应的文字即可。
   
-  ### 1. 选择哪个版本的shadowsocks, 由于shadowsocks由各种语言构建，但是目前还在维护的且稳定的是shadowsocks-libev, 选择 4
+  #### 1. 选择哪个版本的shadowsocks, 由于shadowsocks由各种语言构建，但是目前还在维护的且稳定的是shadowsocks-libev, 选择 4
    ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test05.png)
   
-  ### 2. 输入你自己的密码，直接回车是默认密码
+  #### 2. 输入你自己的密码，直接回车是默认密码
    ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test06.png)
     
-  ### 3. 选择端口，默认即可，注意：不要选择一些服务器的默认端口，比如22端口是SSH协议的默认端口，是要通过xshell类似的远程连接工具连接的，还有http的80，https的443端口
+  #### 3. 选择端口，默认即可，注意：不要选择一些服务器的默认端口，比如22端口是SSH协议的默认端口，是要通过xshell类似的远程连接工具连接的，还有http的80，https的443端口
    ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test07.png)
     
-  ### 4. 选择shadowsocks的加密协议，目前我一直用的协议是aes-256-gcm协议，稳定。回车默认即可
+  #### 4. 选择shadowsocks的加密协议，目前我一直用的协议是aes-256-gcm协议，稳定。回车默认即可
    ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test08.png)
     
-  ### 5. 选择协议混淆，我一直使用混淆，比较稳定，由于地区的原因，使用混淆不一定起效果，如果使用了混淆还翻不了墙，可以选择不用。这里输入y, 然后回车
+  #### 5. 选择协议混淆，我一直使用混淆，比较稳定，由于地区的原因，使用混淆不一定起效果，如果使用了混淆还翻不了墙，可以选择不用。这里输入y, 然后回车
    ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test09.png)
     
-  ### 6. 如果选择了混淆，那么会选择哪种方式，是http还是tls（一种安全套接字，可以给http加上一层‘皮’，这样监听者就看不到你传输的数据包里的内容，如果是http，完全是裸露），这里输入2
+  #### 6. 如果选择了混淆，那么会选择哪种方式，是http还是tls（一种安全套接字，可以给http加上一层‘皮’，这样监听者就看不到你传输的数据包里的内容，如果是http，完全是裸露），这里输入2
    ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test10.png)
     
-  ### 然后会提示press any key to start之类的，直接回车开始安装，这里会出现一大堆安装信息，过程可能需要5~9分钟，请耐心等待，可以随机用鼠标点击xshell页面，防止连接中断
-  ### 如果连接中断，那么需要重新用xshell连接服务器，重复上述过程，但是可能会遇到yum lock has hold之类的信息，那是因为之前的程序正在安装，所以请等待吧。
+  #### 然后会提示press any key to start之类的，直接回车开始安装，这里会出现一大堆安装信息，过程可能需要5~9分钟，请耐心等待，可以随机用鼠标点击xshell页面，防止连接中断
+  #### 如果连接中断，那么需要重新用xshell连接服务器，重复上述过程，但是可能会遇到yum lock has hold之类的信息，那是因为之前的程序正在安装，所以请等待吧。
   
   
-  ### 安装成功，会出现如下界面，这是你的shadowsocks配置信息。
+  #### 安装成功，会出现如下界面，这是你的shadowsocks配置信息。
    ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/success.jpg)
+   
+   
+## 3. 这里还需要安装网络加速工具，可以让你的服务器更快的为你服务。复制以下代码
+  ```
+  wget -N --no-check-certificate "https://raw.githubusercontent.com/hijkpw/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+  ```
+  ### 然后直接回车
