@@ -62,4 +62,53 @@
   ```
   wget -N --no-check-certificate "https://raw.githubusercontent.com/hijkpw/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
   ```
-  ### 然后直接回车
+  #### 1. 然后直接回车，出现如下内容，有多款加速工具，还有魔改版的（笑），这里我选择BBR/BBR魔改版内核，输入 1，然后回车
+  ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test12.png)
+  
+  #### 2. 在一顿安装过后，会显示Complete! 字样，表示安装成功，需要重启服务器，输入Y回车。这里可能由于Linux版本不同会出现安装失败，为了不必要的麻烦，烦请选择CentOS7版本。
+  ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test13.png)
+  
+  #### 3. 重启后，输入 ```./tcp.sh```，然后回车
+  ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test15.png)
+  
+  
+  #### 4. 出现如下字样，输入5，然后回车
+  ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test16.png)
+  
+  #### 5. 提示加速模块启动成功。
+  ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test17.png)
+  
+  #### 到此服务器的安装工具基本完成了，下来就是安装shadowsocks客户端，来连接服务器的shadowsocks，进行代理通信服务。
+  
+  
+## 4. 在此以window10 为例，点击如下连接，然后下载箭头指向的assets, 这里版型选择4.1.10.0，注意：由于墙对Github的特殊感情（其实对于技术网站，基本都会被封禁掉，这也就是为啥你做开发，下载一个第三方包，会慢的要死的原因，因为这些东东不受审查，并且程序员容易开智，不容易被洗脑，所以这个群体很容易受到有关部门和墙的关照），所以打开GitHub可能会很慢，并且下载资源也会很慢
+  <a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank">shadowsocks window</a>
+  
+  #### 1. 然后在你的window10新建一个目录，将其解压到目录，目录路径不有中文（为什么不要有中文？因为这些软件是用英文开发的，一般使用的UTF8字符集，而中文一般是GBK开头的字符集，两个不同的字符集必然导致字符编码时造成混乱）。
+  
+  #### 2. 如果你使用了混淆，那么还需要一个混淆插件，点击如下连接，下载箭头的assets, 然后解压，将其放到你刚刚解压的 shadowsocks window 根目录。
+  <a href="https://github.com/shadowsocks/simple-obfs/releases" target="_blank">obfs local</a>
+  
+  #### 3. 开始设置shadowsocks信息，安装刚刚在xshell安装成功后的信息如下填写就行。如果没来得急保存，在服务器下，输入``` cat /etc/shadowsocks-libev/config.json ```即可，会出现如下的配置信息。
+  ```
+  {
+    "server":"0.0.0.0",
+    "server_port":15762,
+    "password":"teddysun.com",
+    "timeout":300,
+    "user":"nobody",
+    "method":"aes-256-gcm",
+    "fast_open":false,
+    "nameserver":"1.0.0.1",
+    "mode":"tcp_and_udp",
+    "plugin":"obfs-server",
+    "plugin_opts":"obfs=tls"
+}
+  ```
+  **server** 服务器本地地址，在客户端输入你的真实IP地址
+  **server_port** 端口
+  **password** 密码
+  **method** 协议
+  **plugin** 混淆服务器插件
+  **obfs=tls** 混淆方式：tls
+  
