@@ -22,7 +22,7 @@
   
   ### 然后xshell会提示你输入账号和密码，分别输入root和你的密码即可。
   
- ## 3. 获取shadowsocks脚本，并开始构建服务, 这里使用了秋水逸冰的脚本。
+ ## 3. 获取shadowsocks脚本，并开始构建服务, 这里使用了秋水逸冰的脚本。复制以下代码
    ```
    wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
    chmod +x shadowsocks-all.sh
