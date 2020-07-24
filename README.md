@@ -1,6 +1,7 @@
 ## 1. 在Centos7上构建属于你自己的Shadowsocks服务
 
 首先你需要购买一台vps服务器，网上有很多vps厂商，比如vultr，virmatch, 搬瓦工等
+
 1. <a href="https://my.vultr.com/deploy/" target="_blank">vultr</a>
   价格还可以，可以无限创建销毁服务器，如果服务器IP被墙的话，最低一个月2.5美金，只提供ipv6, 建议购买5美金的，线路走传统163线路，一般我会选择硅谷地区。
   
@@ -13,9 +14,12 @@
   总结，如果只是日常Google搜索，上推特，telegram，看视频要求不高的话，推荐选1, 2; 如果土豪，想稳定，要求速度的话，推荐选搬瓦工。搬瓦工还提供了自建的机场-Just my socks，只需要付费，会提供4个
   shadowsocks节点，并且节点被封会自动更换IP，如果不想折腾，推荐选这个。
  
+ #### 关于CN2 GIA和传统骨干网线路的介绍，请看这篇 <a href="https://zhuanlan.zhihu.com/p/37615352" target="_blank">文章</a>
+ 
  #### 以上可以自行搜索并购买服务器，选择vps关键词，不要选host之类的，在此不再赘述。
  
  ## 2. 下面以Virmatch为例，带领大家手把手建立shadowsocks服务。在此先通过Xshell连接你的远程服务器。
+ 
   ### 以下是virmatch控制面板提供的信息，其中ip是地址，用户名为root, 密码为 Root/Admin Password
   ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test04.png)
   
@@ -97,7 +101,7 @@
   
   ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test21.png)
   
-  #### 3. 开始设置shadowsocks信息，安装刚刚在xshell安装成功后的信息如下填写就行。如果没来得急保存，在服务器下，输入 ` cat /etc/shadowsocks-libev/config.json ` 即可，会出现如下的配置信息。
+  #### 3. 开始设置shadowsocks信息，安装刚刚在xshell安装成功后的信息如下填写就行。如果没来得急保存，在服务器下，输入 ` cat /etc/shadowsocks-libev/config.json ` 即可，会出现如下的    配置信息。
   ```
   {
     "server":"0.0.0.0",
@@ -113,23 +117,23 @@
     "plugin_opts":"obfs=tls"
 }
   ```
-  **server** 服务器本地地址，在客户端输入你的真实IP地址  
-  **server_port** 端口  
-  **password** 密码  
-  **method** 协议  
-  **plugin** 混淆服务器插件  
-  **obfs=tls** 混淆方式：tls  
+  **server**   服务器本地地址，在客户端输入你的真实IP地址  
+  **server_port**   端口  
+  **password**   密码  
+  **method**   协议  
+  **plugin**   混淆服务器插件  
+  **obfs=tls**   混淆方式：tls  
   
   #### 这是客户端配置信息
   ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test19.png)
   
   #### 这里的obfs是混淆插件，需要设置一些参数
-   **插件程序** 固定写`obfs-local`  
-   **插件选项** `obfs=tls;obfs-host=www.bing.com`, **tls**是你选择的混淆协议，**obfs-host**是访问某个网站（外网，可访问）来达到混淆墙的监测。  
-   **需要命令行参数** 勾上  
-   **插件参数** `obfs=tls` tls同理  
-   **备注** 随意填写  
-   **超时** 默认即可  
+   **插件程序**   固定写`obfs-local`  
+   **插件选项**   `obfs=tls;obfs-host=www.bing.com`, **tls**是你选择的混淆协议，**obfs-host**是访问某个网站（外网，可访问）来达到混淆墙的监测。  
+   **需要命令行参数**   勾上  
+   **插件参数**   `obfs=tls` tls同理  
+   **备注**   随意填写  
+   **超时**   默认即可  
    
   #### 然后点击应用，确认。
   
