@@ -1,17 +1,18 @@
 ## 1. 在Centos7上构建属于你自己的Shadowsocks服务
 首先你需要购买一台vps服务器，网上有很多vps厂商，比如vultr，virmatch, 搬瓦工等
-1. vultr
+1. <a href="https://my.vultr.com/deploy/" target="_blank">vultr</a>
   价格还可以，可以无限创建销毁服务器，如果服务器IP被墙的话，最低一个月2.5美金，只提供ipv6, 建议购买5美金的，线路走传统163线路，一般我会选择硅谷地区。
   
-2. virmatch
+2. <a href="https://billing.virmach.com/cart.php?gid=1" target="_blank">virmatch</a>
   价格非常便宜，最低1.5美金，也就是不到10RMB，而且带宽大，有1GB，速率有1GB，线路也是走163线路。
 
-3. 搬瓦工
+3. <a href="https://bandwagonhost.com/" target="_blank">搬瓦工</a>
   知名的代理服务器提供商，优点是速度快，稳定，走CN2 GIA线路，目前最好的线路，没有之一，即使是高峰也是稳如狗。价格只有年付，49.9美金。
   
-  总结，如果只是日常Google搜索，上推特，telegram，看视频要求不高的话，推荐选1, 2; 如果土豪，想稳定，要求速度的话，推荐选搬瓦工。搬瓦工还提供了自建的机场-Just my socks，只需要付费，会提供4个shadowsocks节点，并且节点被封会自动更换IP，如果不想折腾，推荐选这个。
+  总结，如果只是日常Google搜索，上推特，telegram，看视频要求不高的话，推荐选1, 2; 如果土豪，想稳定，要求速度的话，推荐选搬瓦工。搬瓦工还提供了自建的机场-Just my socks，只需要付费，会提供4个
+  shadowsocks节点，并且节点被封会自动更换IP，如果不想折腾，推荐选这个。
  
- ### 以上可以自行搜索并购买服务器，选择vps关键词，不要选host之类的，在此不再赘述。
+ #### 以上可以自行搜索并购买服务器，选择vps关键词，不要选host之类的，在此不再赘述。
  
  ## 2. 下面以Virmatch为例，带领大家手把手建立shadowsocks服务。在此先通过Xshell连接你的远程服务器。
   ### 以下是virmatch控制面板提供的信息，其中ip是地址，用户名为root, 密码为 Root/Admin Password
@@ -122,11 +123,17 @@
   
   #### 这里的obfs是混淆插件，需要设置一些参数
    **插件程序** 固定写`obfs-local`  
-   **插件选项** `obfs=tls;obfs-host=www.bing.com`, **tls**是你选择的混淆协议，**obfs-host**是访问某个网站（外网，可访问）来达到混淆墙的监测。
-   **需要命令行参数** 勾上
-   **插件参数** `obfs=tls` tls同理
-   **备注** 随意填写
-   **超时** 默认即可
+   **插件选项** `obfs=tls;obfs-host=www.bing.com`, **tls**是你选择的混淆协议，**obfs-host**是访问某个网站（外网，可访问）来达到混淆墙的监测。  
+   **需要命令行参数** 勾上  
+   **插件参数** `obfs=tls` tls同理  
+   **备注** 随意填写  
+   **超时** 默认即可  
+   
   #### 然后点击应用，确认。
   
-  #### 右键你的shadowsocks客户端，鼠标点击系统代理，选择PAC模式。
+  #### 右键你的shadowsocks客户端，鼠标点击系统代理，选择PAC模式。这里应该可以上网了。
+  
+  
+## 5. 如果想让浏览器更加智能的上网，比如浏览国内网站不通过代理，浏览国外网站需要自动切换到代理，那么需要一款浏览器插件 SwitchyOmega. 通过如下连接查看教程使用
+   
+   #### <a href="https://github.com/FelisCatus/SwitchyOmega/wiki/GFWList" target="_blank">SwitchyOmega教程</a>
