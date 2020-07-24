@@ -19,3 +19,13 @@
   
   ### 以下是xshell登录设置，由于一些原因（GFW, 墙），通过ssh登录远程服务器速度会很慢，请耐心等待，或者重新开启新的窗口登录。
   ![image](https://github.com/LJJ1994/shadowsocks_service/raw/master/images/test03.png)
+  
+  ### 然后xshell会提示你输入账号和密码，分别输入root和你的密码即可。
+  
+ ## 3. 获取shadowsocks脚本，并开始构建服务, 这里使用了秋水逸冰的脚本。
+   ```
+   wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+   chmod +x shadowsocks-all.sh
+   ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
+   ```
+   然后回车开始......
